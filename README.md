@@ -1,4 +1,4 @@
-# Stratum
+ï»¿# Stratum
 
 > **Build web applications in pure C#. No HTML. No CSS. No JavaScript framework.
 > No bundler. No transpiler. No `node_modules`.**
@@ -6,15 +6,15 @@
 > Just a canvas, your code, and the browser.
 
 Stratum compiles C# to WebAssembly and renders every pixel of your app onto a single
-HTML `<canvas>` — bypassing the DOM entirely. It is shamelessly modeled after the
+HTML `<canvas>` â€” bypassing the DOM entirely. It is shamelessly modeled after the
 RAD tools that made desktop development *fun* in the 90s: Visual Basic, Delphi,
 early WinForms.
 
-If you have ever looked at a "modern" web project — `package.json`, `webpack.config.js`,
+If you have ever looked at a "modern" web project â€” `package.json`, `webpack.config.js`,
 `tailwind.config.js`, `tsconfig.json`, `vite.config.ts`, `eslintrc`, `prettierrc`,
 a `src/` folder full of `.tsx`, a `pages/` folder full of `.tsx`, a `components/`
-folder full of `.tsx`, and *one* `index.html` that's mostly empty — and quietly
-wondered *"how did we end up here?"* — Stratum is for you.
+folder full of `.tsx`, and *one* `index.html` that's mostly empty â€” and quietly
+wondered *"how did we end up here?"* â€” Stratum is for you.
 
 **Stratum does for modern web UI what WinForms did for desktop in the late 90s.**
 It throws out three decades of accumulated patchwork (jQuery ? Backbone ? Angular ?
@@ -23,7 +23,7 @@ code?*
 
 ---
 
-<video src="videos/Video%20Project.mp4" autoplay loop muted playsinline width="100%"></video>
+<video src="videos/demo.mp4" autoplay loop muted playsinline width="100%"></video>
 
 ---
 
@@ -40,7 +40,7 @@ code?*
 | Five languages, four config files, one app        | One language, one project, one app       |
 
 Stratum is built for **applications**, not documents. Internal tools, dashboards,
-data-entry forms, line-of-business apps, developer tooling — anywhere the people
+data-entry forms, line-of-business apps, developer tooling â€” anywhere the people
 using the app are known and logic matters more than SEO.
 
 For the longer argument, see [`docs/WHY_THIS_MATTERS.md`](docs/WHY_THIS_MATTERS.md).
@@ -51,7 +51,7 @@ For the longer argument, see [`docs/WHY_THIS_MATTERS.md`](docs/WHY_THIS_MATTERS.
 
 A counter app. Two files. That's the whole program.
 
-**`Counter.stratum`** — what's on the page
+**`Counter.stratum`** â€” what's on the page
 
 ```
 page Counter
@@ -76,7 +76,7 @@ page Counter
     style: primary
 ```
 
-**`Counter.cs`** — what it does
+**`Counter.cs`** â€” what it does
 
 ```csharp
 public partial class Counter
@@ -182,7 +182,7 @@ including building your first two-file page.
    (`Stratum.Generator`) into partial C# classes. You never see the generated code,
    but the control fields it produces show up in IntelliSense the moment you save.
 2. **The runtime** (`Stratum.Core` + `Stratum.Runtime`) is compiled to WebAssembly
-   via the standard `Microsoft.NET.Sdk.WebAssembly` SDK — no Blazor, no ASP.NET host.
+   via the standard `Microsoft.NET.Sdk.WebAssembly` SDK â€” no Blazor, no ASP.NET host.
 3. **A ~60-line JS shim** wires browser input events into `[JSExport]` C# methods
    and exposes the canvas 2D API to C# via `[JSImport]`. That is the entire
    JavaScript footprint of any Stratum app, and it ships inside the framework.
@@ -201,9 +201,9 @@ Full `.stratum` syntax reference: [`docs/STRATUM_FORMAT.md`](docs/STRATUM_FORMAT
 `ToggleSwitch`.
 
 **Samples:**
-- **`samples/Counter`** — the canonical first app.
-- **`samples/TodoList`** — text input, dynamic list, completion state.
-- **`samples/StratumDemo`** — a full canvas-rendered "WebOS" desktop with draggable
+- **`samples/Counter`** â€” the canonical first app.
+- **`samples/TodoList`** â€” text input, dynamic list, completion state.
+- **`samples/StratumDemo`** â€” a full canvas-rendered "WebOS" desktop with draggable
   glass windows, an animated dock, and three demo apps (Files, Settings, Browser).
   Possibly the only WinForms-style desktop environment ever shipped as a single
   `.wasm`.
@@ -213,13 +213,13 @@ Full `.stratum` syntax reference: [`docs/STRATUM_FORMAT.md`](docs/STRATUM_FORMAT
 ## Why now: the WebAssembly moment
 
 WebAssembly has been quietly shipping in every browser for years. The web
-community has mostly used it as an optimization inside the existing paradigm —
+community has mostly used it as an optimization inside the existing paradigm â€”
 "make React faster", "speed up Figma's renderer". Stratum bets that the more
 interesting use of WASM is the obvious one: **stop pretending the browser is a
 document viewer.** It's a runtime. Treat it like one.
 
 This is also a moment where AI agents are writing more and more code. The web's
-multi-language stack is hostile to LLMs — a button that looks right requires
+multi-language stack is hostile to LLMs â€” a button that looks right requires
 correct HTML, correct CSS, *and* correct JS, in three different files, all agreeing
 with each other. Stratum collapses that into one file in one language, with a text
 DSL that reads like Mermaid: dense, unambiguous, and trivial for an AI to generate
@@ -236,14 +236,14 @@ correctly the first time.
 - ? `dotnet new stratum-app` template
 - ? Three working samples
 
-**v1.x — quality of life**
+**v1.x â€” quality of life**
 - Hot reload of `.stratum` files
 - A scrollable `Panel`
 - Multi-line `TextBox`
 - ARIA bridge for screen-reader accessibility
 - More samples (charts, forms, settings UI)
 
-**v2 — ambition**
+**v2 â€” ambition**
 - Visual designer (drag-drop produces `.stratum` text)
 - WebGPU back-end (canvas 2D becomes one of several renderers)
 - Native back-end (the same C# code, no browser)
@@ -286,14 +286,14 @@ Stratum/
 
 ## Contributing
 
-PRs welcome. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) first — it covers the dev
+PRs welcome. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) first â€” it covers the dev
 loop, where things live, and what kinds of changes are likely to land.
 
 ---
 
 ## License
 
-[MIT](LICENSE) — Copyright © 2026 Andrew D. Prevost and contributors.
+[MIT](LICENSE) â€” Copyright Â© 2026 Andrew D. Prevost and contributors.
 
 ---
 
