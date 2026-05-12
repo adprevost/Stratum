@@ -17,8 +17,8 @@ folder full of `.tsx`, and *one* `index.html` that's mostly empty — and quietl
 wondered *"how did we end up here?"* — Stratum is for you.
 
 **Stratum does for modern web UI what WinForms did for desktop in the late 90s.**
-It throws out three decades of accumulated patchwork (jQuery ? Backbone ? Angular ?
-React ? Next ? Remix ? ...) and asks a simpler question: *what if your UI was just
+It throws out three decades of accumulated patchwork (jQuery → Backbone → Angular →
+React → Next → Remix → ...) and asks a simpler question: *what if your UI was just
 code?*
 
 ---
@@ -160,22 +160,22 @@ including building your first two-file page.
 ## How it works
 
 ```
-???????????????????  source generator   ???????????????????
-?  Page.stratum   ? ??????????????????? ? Page.stratum.g  ?
-?  (text DSL)     ?                     ? (partial class) ?
-???????????????????                     ???????????????????
-                                                 ? merges with
-                                                 ?
-???????????????????    Roslyn + WASM    ???????????????????
-?  Page.cs        ? ??????????????????? ?   app.wasm      ?
-?  (your logic)   ?                     ? + tiny JS glue  ?
-???????????????????                     ???????????????????
-                                                 ? runs in
-                                                 ?
-                                        ???????????????????
-                                        ? <canvas>        ?
-                                        ? (the entire UI) ?
-                                        ???????????????????
+┌─────────────────┐  source generator   ┌─────────────────┐
+│  Page.stratum   │ ──────────────────▶ │ Page.stratum.g  │
+│  (text DSL)     │                     │ (partial class) │
+└─────────────────┘                     └────────┬────────┘
+                                                 │ merges with
+                                                 ▼
+┌─────────────────┐    Roslyn + WASM    ┌─────────────────┐
+│  Page.cs        │ ──────────────────▶ │   app.wasm      │
+│  (your logic)   │                     │ + tiny JS glue  │
+└─────────────────┘                     └────────┬────────┘
+                                                 │ runs in
+                                                 ▼
+                                        ┌─────────────────┐
+                                        │ <canvas>        │
+                                        │ (the entire UI) │
+                                        └─────────────────┘
 ```
 
 1. **`.stratum` files** are parsed at build time by a Roslyn source generator
@@ -230,11 +230,11 @@ correctly the first time.
 ## Roadmap
 
 **v1 (here, now)**
-- ? WASM runtime, single-canvas render
-- ? 13 controls, theme, reactive properties
-- ? `.stratum` DSL + source generator
-- ? `dotnet new stratum-app` template
-- ? Three working samples
+- ✅ WASM runtime, single-canvas render
+- ✅ 13 controls, theme, reactive properties
+- ✅ `.stratum` DSL + source generator
+- ✅ `dotnet new stratum-app` template
+- ✅ Three working samples
 
 **v1.x — quality of life**
 - Hot reload of `.stratum` files
@@ -272,14 +272,14 @@ keep reading.
 
 ```
 Stratum/
-??? src/                    # Framework source (Core, Runtime, Controls, DSL, Generator)
-??? samples/                # Counter, TodoList, StratumDemo
-??? tests/Stratum.Tests/    # Console-based test runner
-??? template/               # `dotnet new stratum-app` template
-??? loader/                 # Stratum.html + JS glue (copied into every published app)
-??? build/                  # build.ps1 / build.sh
-??? nuget/                  # pack.ps1 (produces all 5 NuGets locally)
-??? docs/                   # WHY, TECH_SPEC, STRATUM_FORMAT, GETTING_STARTED, DECISIONS
+├── src/                    # Framework source (Core, Runtime, Controls, DSL, Generator)
+├── samples/                # Counter, TodoList, StratumDemo
+├── tests/Stratum.Tests/    # Console-based test runner
+├── template/               # `dotnet new stratum-app` template
+├── loader/                 # Stratum.html + JS glue (copied into every published app)
+├── build/                  # build.ps1 / build.sh
+├── nuget/                  # pack.ps1 (produces all 5 NuGets locally)
+└── docs/                   # WHY, TECH_SPEC, STRATUM_FORMAT, GETTING_STARTED, DECISIONS
 ```
 
 ---
