@@ -23,7 +23,7 @@ code?*
 
 ---
 
-<img alt="demo.gif" data-hpc="true" src="https://github.com/adprevost/Stratum/blob/master/videos/demo.gif?raw=true" style="max-width: 100%;">
+![Stratum demo](videos/demo.gif)
 
 ---
 
