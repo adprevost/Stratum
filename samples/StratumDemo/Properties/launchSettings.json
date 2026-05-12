@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StratumDemo": {
+      "commandName": "Project",
+      "launchBrowser": true
+    }
+  }
+}

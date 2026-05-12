@@ -1,0 +1,38 @@
+page TodoList
+  size: 680 x 600
+  background: background
+  title: "Todo List"
+
+  Label heading
+    text: "Todo List"
+    at: 24, 20
+    size: 300 x 32
+    font: xl bold
+
+  TextBox inputBox
+    at: 24, 70
+    size: 360 x 36
+    placeholder: "What needs doing?"
+
+  Button addBtn
+    text: "Add"
+    at: 396, 70
+    size: 80 x 36
+    style: primary
+
+  Button clearBtn
+    text: "Clear Completed"
+    at: 488, 70
+    size: 160 x 36
+    style: secondary
+
+  Panel listPanel
+    at: 24, 120
+    size: 624 x 400
+    background: transparent
+
+  Label statusLabel
+    text: "0 of 0 remaining"
+    at: 24, 540
+    size: 300 x 24
+    color: muted

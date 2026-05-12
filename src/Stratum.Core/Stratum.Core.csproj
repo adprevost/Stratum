@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>CA1416</NoWarn>
+    <PackageId>Stratum.Core</PackageId>
+    <Version>1.0.0</Version>
+    <Description>Stratum core runtime: Application, Control, Canvas, Theme.</Description>
+    <Authors>Stratum</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Stratum.Runtime" />
+    <InternalsVisibleTo Include="Stratum.Tests" />
+  </ItemGroup>
+
+</Project>

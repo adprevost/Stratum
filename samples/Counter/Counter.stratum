@@ -1,0 +1,33 @@
+page Counter
+  size: 480 x 300
+  background: background
+  title: "Counter"
+
+  Label heading
+    text: "Stratum Counter"
+    at: 40, 40
+    size: 300 x 32
+    font: xl bold
+
+  Label countLabel
+    text: "Count: 0"
+    at: 40, 100
+    size: 200 x 28
+
+  Button incBtn
+    text: "Increment"
+    at: 40, 150
+    size: 120 x 36
+    style: primary
+
+  Button decBtn
+    text: "Decrement"
+    at: 180, 150
+    size: 120 x 36
+    style: secondary
+
+  Button resetBtn
+    text: "Reset"
+    at: 320, 150
+    size: 120 x 36
+    style: secondary

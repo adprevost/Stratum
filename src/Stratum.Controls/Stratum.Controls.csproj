@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Stratum.Controls</PackageId>
+    <Version>1.0.0</Version>
+    <Description>Stratum controls: Button, Label, TextBox, CheckBox, Panel, DataGrid, FlowPanel.</Description>
+    <Authors>Stratum</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stratum.Core\Stratum.Core.csproj" />
+  </ItemGroup>
+
+</Project>

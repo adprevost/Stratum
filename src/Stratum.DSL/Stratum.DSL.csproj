@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Stratum.DSL</PackageId>
+    <Version>1.0.0</Version>
+    <Description>Stratum DSL: text-based UI declaration parser.</Description>
+    <Authors>Stratum</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stratum.Core\Stratum.Core.csproj" />
+    <ProjectReference Include="..\Stratum.Controls\Stratum.Controls.csproj" />
+  </ItemGroup>
+
+</Project>

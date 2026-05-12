@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TodoList": {
+      "commandName": "Project",
+      "launchBrowser": true
+    }
+  }
+}

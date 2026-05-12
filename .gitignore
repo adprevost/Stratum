@@ -1,0 +1,72 @@
+# =============================================================================
+# Stratum .gitignore
+# =============================================================================
+
+# ---- .NET build output ------------------------------------------------------
+bin/
+obj/
+out/
+[Dd]ebug/
+[Rr]elease/
+[Dd]ebugPublic/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Ll]og/
+[Ll]ogs/
+
+# Stratum publish + packing output
+dist/
+nuget/artifacts/
+*.nupkg
+*.snupkg
+
+# ---- Visual Studio / Rider / VS Code ----------------------------------------
+.vs/
+.vscode/
+.idea/
+*.swp
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.vcxproj.user
+
+# ---- .NET / NuGet -----------------------------------------------------------
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.local.json
+*.pdb
+
+# ---- Secrets & local config -------------------------------------------------
+.env
+.env.*
+appsettings.Development.json
+appsettings.Local.json
+appsettings.local.json
+secrets.json
+*.pfx
+*.key
+
+# ---- Web / WASM workflow ----------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- OS detritus ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Unrelated tooling that may end up in the workspace ---------------------
+# (Stratum does not ship these; ignore if a contributor drops them in.)
+localcode.exe
+LOCALCODE.md
+
+# Root-level appsettings.json belongs to no Stratum project — ignore it.
+/appsettings.json

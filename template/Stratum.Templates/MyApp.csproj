@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunAOTCompilation>false</RunAOTCompilation>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stratum.Core"     Version="1.0.0" />
+    <PackageReference Include="Stratum.Runtime"  Version="1.0.0" />
+    <PackageReference Include="Stratum.Controls" Version="1.0.0" />
+  </ItemGroup>
+
+  <!-- Prevent the IL trimmer from removing [JSExport]/[JSImport] types.
+       Neither Stratum.Runtime nor Stratum.Core is called from C# code directly
+       (they are invoked by JS / the dotnet runtime), so without these roots
+       the trimmer strips them and WASM crashes at startup. -->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="Stratum.Runtime" />
+    <TrimmerRootAssembly Include="Stratum.Core" />
+  </ItemGroup>
+</Project>
