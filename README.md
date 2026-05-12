@@ -23,6 +23,10 @@ code?*
 
 ---
 
+<video src="videos/Video%20Project.mp4" autoplay loop muted playsinline width="100%"></video>
+
+---
+
 ## Why Stratum?
 
 | The web circa 2025                                | Stratum                                  |
