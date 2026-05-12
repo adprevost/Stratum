@@ -1,4 +1,4 @@
-﻿# Stratum
+# Stratum
 
 > **Build web applications in pure C#. No HTML. No CSS. No JavaScript framework.
 > No bundler. No transpiler. No `node_modules`.**
@@ -23,7 +23,7 @@ code?*
 
 ---
 
-<video src="videos/demo.mp4" autoplay loop muted playsinline width="100%"></video>
+<video src="[videos/demo.mp4](https://github.com/user-attachments/assets/0eb2ec40-4c81-4efc-9da7-b9a7d47053af)" autoplay loop muted playsinline width="100%"></video>
 
 ---
 
