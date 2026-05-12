@@ -23,7 +23,7 @@ code?*
 
 ---
 
-<video src="https://github.com/user-attachments/assets/0eb2ec40-4c81-4efc-9da7-b9a7d47053af" autoplay loop muted playsinline width="100%"></video>
+![Stratum demo](videos/demo.gif)
 
 ---
 
